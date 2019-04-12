@@ -1,1 +1,84 @@
+* {
+    box-sizing: border-box;
+}
 
+body,
+html {
+  margin: 0px;
+  min-height: 100%;
+  font-family: 'Arimo', sans-serif;
+}
+
+.nav {
+    background: #fff;
+    -webkit-box-shadow: 0 0 32px rgba(0,0,0,.15);
+    box-shadow: 0 0 32px rgba(0,0,0,.15);
+    height: 80px;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 10;
+}
+
+.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 15px;
+    overflow: hidden;
+    background-color: #131313;
+    height: 32px;
+  }
+
+  .topnav li {
+    float: left;
+    list-style: none;
+  }
+
+  .topnav li a {
+    display: inline-block;
+    text-align: center;
+    padding: 0px 7px;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 32px;
+    color: #fff9;
+  }
+
+  #news {
+      color: white;
+  }
+
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #131313;
+    top: 32px;
+    width: 220px;
+    text-align: left;
+  }
+
+  .dropdown-content a {
+    color: #fff9;
+    font-size: 13px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: left !important;
+    padding-left: 10px;
+  }
+
+  .last-drop {
+    border-top: 1px solid #ffffff1a;
+  }
+
+  .topnav li a:hover  {
+      color: white;
+    }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  
