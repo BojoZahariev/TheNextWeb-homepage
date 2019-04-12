@@ -81,4 +81,46 @@ html {
     display: block;
   }
 
-  
+  .logo {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 106px;
+      height: 80px;
+      background-color: #f42;
+      background: linear-gradient(to bottom right,#c09,#f42 85%);
+      text-align: center;
+  }
+
+  .logo img {
+      width: 80px;
+      padding-top: 30px;
+      -webkit-transition: padding-top 1s;
+      transition: padding-top 1s;
+  }
+
+   @media only screen and (max-width: 1024px) {
+      .logo {
+       display: block;
+      }
+
+      .topnav {
+        padding-left: 115px;
+      }
+   }
+
+   @media only screen and (max-width: 768px) {
+      .topnav {
+          display: none;
+      }
+
+      .nav,
+      .logo {
+          height: 48px;
+      }
+
+      .logo img {
+        padding-top: 16px;
+      }
+   }
