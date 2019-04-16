@@ -7,11 +7,9 @@ html {
   margin: 0px;
   min-height: 100%;
   font-family: 'Arimo', sans-serif;
-  
 }
 
 /* Navigation bars*/
-
 
 /*top bar*/
 .topnav {
@@ -120,8 +118,8 @@ html {
 /*left*/
 .nav {
   background: #fff;
-  -webkit-box-shadow: 0 0 32px rgba(0, 0, 0, .15);
-  box-shadow: 0 0 32px rgba(0, 0, 0, .15);
+  -webkit-box-shadow: 0 0 32px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.15);
   height: 48px;
   left: 0;
   position: sticky;
@@ -139,13 +137,15 @@ html {
 
 .mainnav li {
   float: left;
+  flex-direction: row;
+  flex-wrap: nowrap;
   list-style: none;
 }
 
 .mainnav li a {
   display: inline-block;
   text-align: center;
-  padding: 0px 10px;
+  padding: 0px 5px;
   text-decoration: none;
   font-size: 14px;
   line-height: 48px;
@@ -154,25 +154,36 @@ html {
 
 /*Right*/
 
-
+.navright {
+display: flex;
+float: right;
+}
 
 .navrightimg {
   margin: 20px 5px;
-  float: right;
   width: 125px;
   height: 11px;
-  
 }
 
 .nav-countdown-text {
-  float: right;
   color: #555;
   margin: 18px 5px;
   font-size: 14px;
 }
 
+.bars {
+  display: none;
+  
+}
+
+.fa-bars {
+  display: none;
+  color: #f42;
+  font-size: 23px;
+  margin: 14px 5px;
+}
+
 .timer {
-  float: right;
   color: #f42;
   text-decoration: none;
   font-size: 23px;
@@ -180,7 +191,7 @@ html {
 }
 
 .btn {
-  float: right;
+ 
   position: relative;
   bottom: 3px;
   background-color: #0cc;
@@ -196,13 +207,13 @@ html {
   margin: 13px 5px;
 }
 
-.fa-search{
-  float: right;
+.fa-search {
+ 
   color: #aaa;
   padding: 17px 20px;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
-  border-right: 1px solid #aaa;
+  border-right: 1px solid #eeeeee
 }
 
 /*Media*/
@@ -211,26 +222,34 @@ html {
     display: block;
     height: 80px;
   }
+
+  .bars {
+    display: block;
+  }
+
   .topnav,
   .mainnav {
     padding-left: 120px;
   }
 
-  .navrightimg {
+  .navrightimg,
+  .btn,
+  .nav-countdown-text {
     display: none;
   }
-
-  
 }
 
 @media only screen and (max-width: 768px) {
-  .topnav {
+  .topnav,
+  .mainnav {
     display: none;
   }
+
   #logoid {
     display: block;
     height: 48px;
   }
+
   .logo img {
     padding-top: 16px;
   }
@@ -241,4 +260,22 @@ html {
   top: 100px;
   width: 300px;
   margin: auto;
+}
+
+@media only screen and (max-width: 480px) {
+
+  .timer {
+    order: 1;
+    padding-right: 25px;
+  }
+
+  .fa-search {
+    order: 2;
+    border-left: 1px solid #eeeeee;
+  }
+
+  .bars {
+    order: 3;
+    padding: 0px 5px;
+  }
 }
