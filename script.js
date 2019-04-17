@@ -1,8 +1,38 @@
-window.onresize = function() {
+//Timer 
+
+var timer = document.getElementById('timerid');
+
+setInterval(function time() {
+  var d = new Date();
+  var days = 30 - d.getDay();
+  var hours = 24 - d.getHours();
+  var min = 60 - d.getMinutes();
+  var sec = 60 - d.getSeconds();
+
+  if ((days + '').length == 1) {
+    days = '0' + days;
+  }
+  if ((hours + '').length == 1) {
+    hours = '0' + hours;
+  }
+  if ((min + '').length == 1) {
+    min = '0' + min;
+  }
+  if ((sec + '').length == 1) {
+    sec = '0' + sec;
+  }
+
+  timer.textContent = days + ":" + hours + ':' + min + ':' + sec;
+}, 1000);
+
+
+//resize, scroll
+
+window.onresize = function () {
   toggle();
 };
 
-window.onscroll = function() {
+window.onscroll = function () {
   myFunction();
 };
 
@@ -38,3 +68,4 @@ function toggle() {
     mainnav.style.paddingLeft = '120px';
   }
 }
+
