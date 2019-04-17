@@ -208,12 +208,34 @@ float: right;
 }
 
 .fa-search {
- 
   color: #aaa;
   padding: 17px 20px;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
   border-right: 1px solid #eeeeee
+}
+
+.navmsg {
+  position: sticky;
+  top: 48px;
+  height: 30px;
+  width: 100%;
+  color: #000;
+  background-color: #fd3;
+  z-index: 2;
+  line-height: 30px;
+  font-size: 14px;
+  padding-left: 15px;
+  overflow: hidden;
+}
+
+
+
+.filler {
+  position: relative;
+  top: 100px;
+  width: 300px;
+  margin: auto;
 }
 
 /*Media*/
@@ -237,6 +259,10 @@ float: right;
   .nav-countdown-text {
     display: none;
   }
+
+  .navmsg {
+    padding-left: 120px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -253,13 +279,12 @@ float: right;
   .logo img {
     padding-top: 16px;
   }
-}
 
-.filler {
-  position: relative;
-  top: 100px;
-  width: 300px;
-  margin: auto;
+  .navmsg {
+    padding-left: 0px;
+    text-align: center;
+  }
+
 }
 
 @media only screen and (max-width: 480px) {
@@ -277,5 +302,9 @@ float: right;
   .bars {
     order: 3;
     padding: 0px 5px;
+  }
+
+  .navmsg {
+    font-size: 11px;
   }
 }
