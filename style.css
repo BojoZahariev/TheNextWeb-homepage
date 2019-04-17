@@ -291,7 +291,7 @@ float: right;
 
   .timer {
     order: 1;
-    padding-right: 25px;
+    margin-right: 25px;
   }
 
   .fa-search {
