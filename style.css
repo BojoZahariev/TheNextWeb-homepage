@@ -233,8 +233,10 @@ html {
 .headlines {
   height: 75vh;
   padding: 4px;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-gap: 6px;
+  grid-template-areas: "art1 art1 art2"
+    "art1 art1 art3"
 }
 
 .cover-image {
@@ -243,8 +245,9 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
-  width: 66.66666%;
-  margin: 0px 3px;
+  grid-area: art1;
+  position: relative;
+
 }
 
 .small-headline-wraper {
@@ -258,20 +261,24 @@ html {
 }
 
 .small-headline {
-  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/04/galaxy-fold-796x419.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 49%;
+  height: 100%;
+  position: relative;
+}
+
+#small-headline1 {
+  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/04/galaxy-fold-796x419.png");
+  grid-area: art2;
 }
 
 #small-headline2 {
-  background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/04/AC-Unity-Free-Ubisoft-796x417.jpg);
-  background-position: center;
+  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/04/AC-Unity-Free-Ubisoft-796x417.jpg");
+  grid-area: art3;
 }
 
 .filler {
-
   width: 300px;
   margin: auto;
 }
@@ -331,21 +338,10 @@ html {
 
   .headlines {
     height: 100vh;
-    display: block;
-
+    grid-template-areas: "art1"
+      "art2"
+      "art3"
   }
-
-  .cover-image {
-    width: 100%;
-    height: 30vh;
-  }
-
-  .small-headline-wraper {
-    margin-top: 10px;
-    width: 100%;
-    height: 60vh;
-  }
-
 }
 
 @media only screen and (max-width: 480px) {
