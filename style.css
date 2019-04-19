@@ -72,6 +72,8 @@ html {
   display: block;
 }
 
+
+
 /* Logo */
 .logo {
   display: none;
@@ -91,6 +93,7 @@ html {
   padding-top: 30px;
   -webkit-transition: padding-top 1s;
   transition: padding-top 1s;
+  z-index: 3;
 }
 
 .logo2 {
@@ -103,15 +106,53 @@ html {
   background-color: #f42;
   background: linear-gradient(to bottom right, #c09, #f42 85%);
   text-align: center;
-  z-index: 4;
+  z-index: 9;
 }
 
 .logo2 img {
-  width: 80px;
+  width: 70px;
+  height: 35px;
   padding-top: 16px;
   -webkit-transition: padding-top 1s;
   transition: padding-top 1s;
+  z-index: 9;
 }
+
+.logo2-dropdown-content {
+  position: absolute;
+  background-color: #131313;
+  top: 78px;
+  left: 0;
+  width: 106px;
+  text-align: center;
+  z-index: 9;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .5s;
+}
+
+.logo2-dropdown-content a {
+  display: block;
+  color: #fff9;
+  font-size: 13px;
+  text-decoration: none;
+  width: 100%;
+  padding: 8px;
+}
+
+.logo2-dropdown-content a:hover {
+  color: #fff;
+}
+
+.logo2:hover,
+.logo:hover {
+  background-image: url(images/home-1.gif);
+}
+
+.logo2:hover .logo2-dropdown-content {
+  max-height: 1000px;
+}
+
 
 /*Main navigation bar*/
 
@@ -226,18 +267,21 @@ html {
   line-height: 30px;
   font-size: 14px;
   padding-left: 15px;
-  overflow: hidden;
+  box-shadow: 0 16px 48px #00000026;
 }
+
+/*Headlines*/
 
 .headlines {
   height: 60vh;
-  padding: 4px;
+  padding: 2px 6px;
   display: grid;
   grid-gap: 6px;
   grid-template-areas: "art1 art1 art2"
     "art1 art1 art3"
 }
 
+/* main headline*/
 .cover-image {
   background-image: url(images/witcher.jpg);
   background-position: center;
@@ -246,18 +290,87 @@ html {
   height: 100%;
   grid-area: art1;
   position: relative;
+  mix-blend-mode: darken;
 
 }
 
-.small-headline-wraper {
-  margin: 0px;
-  width: 33.33333%;
-  height: 100%;
-  margin: 0px 3px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.cover-gradient {
+  background: transparent url(images/cover-gradient.png) no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  bottom: 0px;
+  left: 0px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: 6;
 }
+
+.cover-gradient:hover {
+  mix-blend-mode: lighten;
+}
+
+.cover-logo {
+  position: absolute;
+  left: 24px;
+  top: 24px;
+  max-width: 50%;
+  height: 112px;
+  z-index: 7;
+}
+
+.cover-date {
+  color: #fff;
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  z-index: 7;
+}
+
+.main-header {
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+  z-index: 7;
+  padding: 5px;
+}
+
+.main-header h5 {
+  position: relative;
+  color: #fff;
+  left: 2%;
+  top: 10px;
+  font-size: 14px;
+
+}
+
+.main-header h2 {
+  position: relative;
+  color: #fff;
+  font-size: 55px;
+  font-weight: 900;
+  line-height: 1;
+  padding-right: 5px;
+  left: 2%;
+  right: 2%;
+
+}
+
+.by {
+  position: relative;
+  color: #fff9;
+  bottom: 0.3em;
+  left: 2%;
+  font-size: 12px;
+}
+
+.fa-clock,
+.fa-share-alt {
+  padding: 0px 5px;
+}
+
+/*small headlines*/
 
 .small-headline {
   background-position: center;
@@ -276,6 +389,35 @@ html {
   background-image: url(images/unity.jpg);
   grid-area: art3;
 }
+
+.small-header {
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+  z-index: 7;
+  padding: 5px;
+}
+
+.small-header h5 {
+  position: relative;
+  color: #fff;
+  left: 2%;
+  top: 10px;
+  font-size: 14px;
+}
+
+.small-header h2 {
+  position: relative;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1;
+  padding-right: 5px;
+  left: 2%;
+  right: 2%;
+}
+
 
 .filler {
   width: 300px;
@@ -309,7 +451,16 @@ html {
   }
 
   .headlines {
-    height: 60vh;
+    height: 50vh;
+  }
+
+  .cover-logo,
+  .cover-date {
+    display: none;
+  }
+
+  .main-header h2 {
+    font-size: 39px;
   }
 
 }
@@ -340,6 +491,10 @@ html {
     grid-template-areas: "art1"
       "art2"
       "art3"
+  }
+
+  .main-header h2 {
+    font-size: 20px;
   }
 }
 
