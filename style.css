@@ -198,6 +198,7 @@ html {
 .navright {
   display: flex;
   float: right;
+  z-index: 999;
 }
 
 .navrightimg {
@@ -222,6 +223,7 @@ html {
   color: #f42;
   font-size: 23px;
   margin: 14px 5px;
+  cursor: pointer;
 }
 
 .timer {
@@ -230,6 +232,7 @@ html {
   text-decoration: none;
   font-size: 23px;
   margin: 13px 5px;
+  z-index: 10;
 }
 
 .btn {
@@ -253,7 +256,8 @@ html {
   padding: 17px 20px;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
-  border-right: 1px solid #eeeeee
+  border-right: 1px solid #eeeeee;
+  cursor: pointer;
 }
 
 .navmsg {
@@ -385,7 +389,7 @@ html {
 }
 
 .small-headline:hover {
-  filter: opacity(100%)
+  filter: opacity(100%);
 }
 
 #small-headline1 {
@@ -463,23 +467,23 @@ html {
 
 .flexnews {
   display: flex;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .flexnews-part {
   flex-basis: 25%;
-  max-width: 540px;
+  max-width: 25%;
   padding: 12px;
-  max-width: 270px;
+  cursor: pointer;
 }
 
 .flexnews-part-img {
   background-color: #131313;
-  background-image: url(images/sale_18296_primary_image_wide-540x270.jpg);
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -501,13 +505,54 @@ html {
   font-size: 13px;
 }
 
+#news-img1 {
+  background-image: url(images/bioorganic-540x265.jpg)
+}
+
+#news-img2 {
+  background-image: url(images/bitcoinsv-1-480x270.jpg)
+}
+
+#news-img3 {
+  background-image: url(images/maxresdefault-1-480x270.jpg);
+}
+
+#news-img4 {
+  background-image: url(images/OnePlus-7-514x270.jpg);
+}
+
+#news-img5 {
+  background-image: url(images/sale_18296_primary_image_wide-540x270.jpg);
+}
+
+#news-img6 {
+  background-image: url(images/TNW2019_GillianTans-525x270.png);
+}
+
+#news-img7 {
+  background-image: url(images/yang-yanggang-cryptocurrency-bitcoin-blockchain-regulations-US-china-europe-digital-assets-2020-presidential-race-480x270.jpg);
+}
+
+#news-img8 {
+  background-image: url(images/Smart-House-405x270.jpg);
+}
+
+/*DEals*/
+
+.deals h2 {
+  color: #f42;
+  font-size: 28px;
+}
+
+
 
 .filler {
-  width: 300px;
-  margin: auto;
+  height: 500px;
 }
 
 /*Media*/
+
+
 @media only screen and (max-width: 1024px) {
   #logoid {
     display: block;
@@ -526,6 +571,10 @@ html {
   .navrightimg,
   .btn,
   .nav-countdown-text {
+    display: none;
+  }
+
+  .dropout {
     display: none;
   }
 
@@ -592,6 +641,14 @@ html {
     font-size: 20px;
   }
 
+  .cover-gradient {
+    display: none;
+  }
+
+  .small-headline {
+    filter: opacity(100%);
+  }
+
   .flexnews-part {
     flex-basis: 100%;
     max-width: 100%;
@@ -615,7 +672,7 @@ html {
 
   .timer {
     order: 1;
-    margin-right: 25px;
+    margin-right: 35px;
   }
 
   .fa-search {
