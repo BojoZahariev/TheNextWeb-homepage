@@ -694,6 +694,8 @@ html {
 }
 
 .most-popular h5 {
+	color: #fff;
+	margin-bottom: -10px;
 	left: 2%;
 }
 
