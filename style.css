@@ -277,7 +277,7 @@ html {
 	padding: 2px 6px;
 	display: grid;
 	grid-gap: 6px;
-	grid-template-areas: "art1 art1 art2" "art1 art1 art3";
+	grid-template-areas: "art1 art1 art2""art1 art1 art3";
 }
 
 /* main headline*/
@@ -668,15 +668,47 @@ html {
 }
 
 .row3-img {
-	background-image: url(images/Apple-tag-796x418.jpg);
 	background-position: 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
 	height: 18vw;
 	min-height: 230px;
+	max-height: 275px;
 	background-color: black;
 	position: relative;
+}
+
+#row3-img1 {
+	background-image: url(images/Apple-tag-796x418.jpg);
+}
+
+#row3-img2 {
+	background-image: url(images/P30-4-of-5-368x276.jpg);
+}
+
+#row3-img3 {
+	background-image: url(images/google-protest-368x276.png);
+}
+
+#row3-img4 {
+	background-image: url(images/roland-368x276.jpg);
+}
+
+#row3-img5 {
+	background-image: url(images/download2-368x276.png);
+}
+
+#row3-img6 {
+	background-image: url(images/Untitled-design-9-368x276.jpg);
+}
+
+#row3-img7 {
+	background-image: url(images/firefox-stop-cryptojacking-bitcoin-mining-cryptocurrency-monero-blockchain-mozilla-368x276.jpg);
+}
+
+#row3-img8 {
+	background-image: url(images/MK-11-368x276.jpg);
 }
 
 .most-popular {
@@ -729,13 +761,45 @@ html {
 }
 
 .row3top span {
-	background-image: url(images/Google-Play-budget-hed.jpg);
+	background-color: #000;
 	background-position: 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 96px;
 	height: 96px;
 	float: right;
+}
+
+#row3top-span1 {
+	background-image: url(images/Google-Play-budget-hed.jpg);
+}
+
+#row3top-span2 {
+	background-image: url(images/IMG_20190417_130740.jpg);
+}
+
+#row3top-span3 {
+	background-image: url(images/Untitled-design32.png);
+}
+
+#row3top-span4 {
+	background-image: url(images/autodesk.jpg);
+}
+
+#row3top-span5 {
+	background-image: url(images/download1.png);
+}
+
+#row3top-span6 {
+	background-image: url(images/sextortion-blockchain-cryptocurrency-bitcoin-masturbation-video-hack.jpg);
+}
+
+#row3top-span7 {
+	background-image: url(images/Stadia-black-hed.jpg);
+}
+
+#row3top-span8 {
+	background-image: url(images/Archspire.jpg);
 }
 
 .latest-list {
@@ -853,7 +917,7 @@ html {
 
 	.headlines {
 		height: 100vh;
-		grid-template-areas: "art1" "art2" "art3";
+		grid-template-areas: "art1""art2""art3";
 	}
 
 	.main-header h2 {
