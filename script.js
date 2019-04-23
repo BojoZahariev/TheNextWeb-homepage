@@ -1,3 +1,12 @@
+window.onresize = function () {
+  toggle();
+};
+
+window.onscroll = function () {
+  myFunction();
+};
+
+
 //Timer 
 
 var timer = document.getElementById('timerid');
@@ -27,14 +36,6 @@ setInterval(function time() {
 
 
 //resize, scroll
-
-window.onresize = function () {
-  toggle();
-};
-
-window.onscroll = function () {
-  myFunction();
-};
 
 var nav = document.getElementById('navid');
 var sticky = nav.offsetTop;
@@ -68,4 +69,3 @@ function toggle() {
     mainnav.style.paddingLeft = '120px';
   }
 }
-
