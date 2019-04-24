@@ -465,13 +465,12 @@ html {
 	-webkit-box-direction: normal;
 	margin: auto;
 	width: 100%;
-	justify-content: center;
 }
 
 .flexnews-part {
 	position: relative;
 	flex-basis: 25%;
-	max-width: 25%;
+
 	padding: 12px;
 	cursor: pointer;
 	min-width: 230px;
@@ -484,7 +483,7 @@ html {
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
-	max-width: 270px;
+	max-width: 300px;
 	height: 15vw;
 	max-height: 135px;
 	overflow: hidden;
@@ -965,7 +964,6 @@ html {
 	background-color: #131313;
 }
 
-
 .footer-text-wraper {
 	padding-top: 30px;
 	color: #aaa;
@@ -1058,7 +1056,7 @@ b {
 	}
 
 	.flex-deals-part {
-		flex-basis: 33%;
+		flex-basis: 33.33%;
 	}
 
 	.row3 {
@@ -1071,7 +1069,6 @@ b {
 }
 
 @media only screen and (max-width: 768px) {
-
 	.topnav,
 	.mainnav {
 		display: none;
