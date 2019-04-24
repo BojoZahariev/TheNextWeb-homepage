@@ -303,11 +303,12 @@ html {
 	right: 0px;
 	top: 0px;
 	z-index: 6;
+	mix-blend-mode: lighten;
 	transition: .4s ease;
 }
 
 .cover-gradient:hover {
-	mix-blend-mode: lighten;
+	mix-blend-mode: darken;
 }
 
 .cover-logo {
@@ -953,6 +954,11 @@ html {
 	height: 45px;
 	cursor: pointer;
 	border: 1px solid #333;
+}
+
+#wifi,
+#envelope {
+	padding-left: 13px;
 }
 
 .footer-top i:hover {
