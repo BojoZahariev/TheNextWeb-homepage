@@ -1,1 +1,1 @@
-PROJECT: BUILDING WITH RESPONSIVE DESIGN from The Odin Project
+Building with responsive design.
